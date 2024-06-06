@@ -1,0 +1,232 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 5px;
+  margin-top: 50px;
+  background-color: hsl(0 0% 10%);
+  color: white;
+}
+
+/*  */
+.header {
+  display: flex;
+  top: 0;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  z-index: 1;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+}
+
+.header ul li a {
+  padding: 0.5rem 1rem;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header ul li a:hover {
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.poster {
+  position: relative;
+}
+
+.poster img {
+  width: 100%;
+}
+
+.poster h1 {
+  position: absolute;
+  bottom: 10px;
+  left: 3.5rem;
+}
+
+/* about css */
+
+.about {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 3rem;
+  margin: 4rem; 
+  padding: 4rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.about img {
+  width: 100%;
+}
+
+.about-des h1 {
+  text-align: center;
+}
+
+.about-des h5 {
+  text-align: center;
+  font-size: 18px;
+}
+
+.about-des p {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+}
+
+/* menu */
+.menu {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 4rem;
+  gap: 3rem;
+  padding: 4rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.menu img {
+  width: 100%;
+}
+
+.menu h1 {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.menu h4 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.menu p {
+  letter-spacing: 0px;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.container{
+  margin: 4rem;
+  padding: 4rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.container p{
+  letter-spacing: 0px;
+  font-size: 15px;
+  padding-bottom: 20px;
+}
+
+.catering_test{
+  color: #607d8b;
+}
+
+.container input{
+width: 100%;
+padding:1.5rem 0.5rem;
+border-bottom: 1px solid #ccc;
+margin-bottom: 1rem;
+border-top: none;
+border-left: none;
+border-right: none;
+}
+
+
+.container button {
+  color: white;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 0.1ch;
+  background: var(--bg);
+  border: 4px solid transparent;
+  box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+  cursor: pointer;
+  background:
+    linear-gradient(var(--bg), var(--bg)) padding-box,
+    var(--glow),
+    linear-gradient(black, black) border-box;
+  transition: background-size 0.24s;
+  touch-action: none;
+  position: relative;
+  padding: 1rem 2rem;
+}
+
+.container button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  box-shadow: 0 1px hsl(0 0% 100% / 0.15) inset;
+  background: var(--bg);
+  z-index: 2;
+  color: white;
+
+  /*   border: 4px solid transparent; */
+  border-radius: 1rem;
+}
+
+:root:has(button:active) {
+  --size: 300px;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  filter: blur(20px);
+  border: 4px solid transparent;
+  background: var(--glow);
+  border-radius: 1rem;
+  color: white;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+
+:root {
+  --x: 0;
+  --y: 0;
+  --xp: 0;
+  --yp: 0;
+  --hue: calc(0 + (var(--xp) * 500));
+  --bg: hsl(0 0% 10%);
+  --size: 100px;
+  --glow: radial-gradient(50% 50% at center,
+      hsl(var(--hue) 80% 85%),
+      hsl(var(--hue) 80% 70%),
+      transparent) calc((var(--x) * 1px) - (var(--size) * 0.5)) calc((var(--y) * 1px) - (var(--size) * 0.5)) / var(--size) var(--size) no-repeat fixed;
+}
+
+button span {
+  background: var(--glow), black;
+  background-clip: text;
+  color: transparent;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  inset: 0;
+  color: white;
+}
+
+
+.footer {
+  text-align: center;
+  color: #ccc;
+  background-color: black !important;
+  height: 100px;
+  padding-top: 20px;
+}
+
+.btn {
+  display: flex;
+  gap: 40px;
+}
